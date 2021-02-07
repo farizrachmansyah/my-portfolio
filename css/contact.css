@@ -1,0 +1,136 @@
+:root {
+    font-size: 16px;
+    --dark-color: #1a1b1c;
+    --light-color: #e3ded9;
+    --accent-color: #bba686;
+    --primary-color: #416270;
+    --secondary-color: #8aa4ab;
+
+    --ff-primary: "Poppins", sans-serif;
+    --ff-secondary: "Source Sans Pro", sans-serif;
+
+    --ff-xl: 5rem;
+    --ff-lg: 4.125rem;
+    --ff-md: 3.125rem;
+    --ff-avg: 2.825rem;
+    --ff-sm: 2rem;
+    --ff-xs: 1.625rem;
+    --ff-xxs: 1.125rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.contacts-main {
+    max-width: 900px;
+}
+.contact:not(:last-child) {
+    margin-bottom: 78px;
+}
+.contact-title {
+    font-family: var(--ff-primary);
+    font-size: var(--ff-lg);
+    color: var(--dark-color);
+    line-height: 105%;
+    margin-bottom: 28px;
+}
+.contact-subtext {
+    font-family: var(--ff-primary);
+    font-weight: 400;
+    font-size: var(--ff-sm);
+    color: var(--dark-color);
+    line-height: 165%;
+}
+.contact-email {
+    color: var(--primary-color);
+}
+.contact-email:hover {
+    text-decoration: underline;
+}
+
+/* Utilities */
+.address:hover {
+    text-decoration: underline;
+}
+.contact-title span {
+    position: relative;
+}
+.contact-title span::before {
+    content: "";
+    position: absolute;
+    bottom: 15%;
+    z-index: -1;
+    width: 100%;
+    height: 18px;
+    background-color: var(--accent-color);
+}
+
+/* Media Quaries */
+@media only screen and (max-width: 1440px) {
+    .contacts-main {
+        max-width: 800px;
+    }
+    .contact-title {
+        font-size: var(--ff-md);
+    }
+    .contact-subtext {
+        font-size: var(--ff-xs);
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+    .contacts-main {
+        max-width: 700px;
+    }
+    .contact-title {
+        font-size: var(--ff-avg);
+    }
+    .contact-subtext {
+        font-size: var(--ff-xxs);
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .contacts-main {
+        max-width: 600px;
+    }
+    .contact-title {
+        font-size: var(--ff-sm);
+    }
+    .contact-subtext {
+        font-size: 1rem;
+    }
+
+    .contact-title span::before {
+        height: 12px;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .contacts-main {
+        max-width: 350px;
+    }
+    .contact-title {
+        font-size: var(--ff-xs);
+        margin-bottom: 18px;
+    }
+
+    .address {
+        color: var(--primary-color);
+    }
+    .contact-title span::before {
+        height: 10px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .contacts-main {
+        max-width: 300px;
+    }
+    .contact-subtext {
+        font-size: 0.9rem;
+    }
+}

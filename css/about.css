@@ -1,0 +1,101 @@
+:root {
+    font-size: 16px;
+    --dark-color: #1a1b1c;
+    --light-color: #e3ded9;
+    --accent-color: #bba686;
+    --primary-color: #416270;
+    --secondary-color: #8aa4ab;
+
+    --ff-primary: "Poppins", sans-serif;
+    --ff-secondary: "Source Sans Pro", sans-serif;
+
+    --ff-xl: 5rem;
+    --ff-lg: 4.125rem;
+    --ff-md: 3.125rem;
+    --ff-avg: 2.825rem;
+    --ff-sm: 2rem;
+    --ff-xs: 1.625rem;
+    --ff-xxs: 1.125rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.about-main {
+    max-width: 900px;
+}
+.about-title {
+    font-family: var(--ff-primary);
+    font-size: var(--ff-lg);
+    color: var(--dark-color);
+    line-height: 105%;
+    margin-bottom: 48px;
+}
+.about-subtext {
+    font-family: var(--ff-primary);
+    font-weight: 400;
+    font-size: var(--ff-xs);
+    color: var(--dark-color);
+    line-height: 165%;
+    margin-bottom: 28px;
+}
+
+/* Media Quaries */
+
+@media only screen and (max-width: 1440px) {
+    .about-main {
+        max-width: 800px;
+    }
+    .about-title {
+        font-size: var(--ff-md);
+    }
+    .about-subtext {
+        font-size: 1.35rem;
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+    .about-main {
+        max-width: 700px;
+    }
+    .about-title {
+        font-size: var(--ff-avg);
+    }
+    .about-subtext {
+        font-size: var(--ff-xxs);
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .about-main {
+        max-width: 600px;
+    }
+    .about-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .about-main {
+        max-width: 350px;
+    }
+    .about-title {
+        font-size: var(--ff-sm);
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .about-main {
+        max-width: 300px;
+    }
+    .about-title {
+        font-size: var(--ff-xs);
+        margin-bottom: 28px;
+    }
+    .about-subtext {
+        font-size: 1rem;
+    }
+}
