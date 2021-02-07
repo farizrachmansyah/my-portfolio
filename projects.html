@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="apple-touch-icon" sizes="57x57" href="./assets/icons/apple-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="60x60" href="./assets/icons/apple-icon-60x60.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="./assets/icons/apple-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="./assets/icons/apple-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="./assets/icons/apple-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="./assets/icons/apple-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="./assets/icons/apple-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="./assets/icons/apple-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-icon-180x180.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/android-icon-192x192.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="96x96" href="./assets/icons/favicon-96x96.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+            integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+            crossorigin="anonymous"
+        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/projects.css" />
+        <title>Fariz Rachmansyah - Projects</title>
+    </head>
+    <body>
+        <main class="home">
+            <section class="home-info">
+                <header>
+                    <div class="logo">
+                        <a href="./index.html"><img src="./assets/logo.svg" alt="logo" /></a>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.instagram.com/farizrachmansyah" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/farizrachmansyah/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/farizrachmansyah" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                    <div class="burger-btn" onclick="handle()">
+                        <div class="burger-line line1"></div>
+                        <div class="burger-line line2"></div>
+                        <div class="burger-line line3"></div>
+                    </div>
+                </header>
+                <div id="mobile-menu" class="overlay">
+                    <div class="overlay-content">
+                        <a href="./skills.html">Skills</a>
+                        <a href="./projects.html">Projects</a>
+                        <a href="./contact.html">Get in touch</a>
+                    </div>
+                    <div class="mobile-footer">made with &hearts; from Depok</div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="projects-main">
+                    <a href="https://farizrachmansyah.github.io/drum-app/" target="_blank">
+                        <div class="project">
+                            <h1 class="project-title">&#129345; DrumTap</h1>
+                            <p class="project-subtext">Make your own drum instrument</p>
+                        </div>
+                    </a>
+                    <a href="https://farizrachmansyah.github.io/batu-gunting-kertas/" target="_blank">
+                        <div class="project">
+                            <h1 class="project-title">&#127918; MKKB Game</h1>
+                            <p class="project-subtext">Masa Kecil Kurang Bahagia</p>
+                        </div>
+                    </a>
+                    <a href="https://farizrachmansyah.github.io/todo-app/" target="_blank">
+                        <div class="project">
+                            <h1 class="project-title">&#128554; CatetIn!</h1>
+                            <p class="project-subtext">
+                                A phenomenal todo list app. This application is very often used as a reference to train the abilities of
+                                junior web developers, including me
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <section class="home-nav">
+                <nav id="nav" class="nav">
+                    <a href="./skills.html">Skills</a>
+                    <a href="./projects.html">Projects</a>
+                    <a href="./contact.html">Get in touch</a>
+                </nav>
+                <footer class="footer">made with &hearts; from Depok</footer>
+            </section>
+        </main>
+
+        <script src="js/app.js"></script>
+    </body>
+</html>
