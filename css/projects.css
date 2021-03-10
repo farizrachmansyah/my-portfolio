@@ -1,125 +1,139 @@
 :root {
-    font-size: 16px;
-    --dark-color: #1a1b1c;
-    --light-color: #e3ded9;
-    --accent-color: #bba686;
-    --primary-color: #416270;
-    --secondary-color: #8aa4ab;
+  font-size: 16px;
+  --dark-color: #1a1b1c;
+  --light-color: #e3ded9;
+  --accent-color: #bba686;
+  --primary-color: #416270;
+  --secondary-color: #8aa4ab;
 
-    --ff-primary: "Poppins", sans-serif;
-    --ff-secondary: "Source Sans Pro", sans-serif;
+  --ff-primary: "Poppins", sans-serif;
+  --ff-secondary: "Source Sans Pro", sans-serif;
 
-    --ff-xl: 5rem;
-    --ff-lg: 4.125rem;
-    --ff-md: 3.125rem;
-    --ff-avg: 2.825rem;
-    --ff-sm: 2rem;
-    --ff-xs: 1.625rem;
-    --ff-xxs: 1.125rem;
+  --ff-xl: 5rem;
+  --ff-lg: 4.125rem;
+  --ff-md: 3.125rem;
+  --ff-avg: 2.825rem;
+  --ff-sm: 2rem;
+  --ff-xs: 1.625rem;
+  --ff-xxs: 1.125rem;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .projects-main {
-    max-width: 80%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+  position: fixed;
+  max-width: 60%;
+  top: 18%;
+  max-height: 78%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 50px;
 }
-.projects-main a:nth-child(1),
-.projects-main a:nth-child(2) {
-    align-self: center;
+
+.projects-main::-webkit-scrollbar {
+  width: 5px;
+}
+
+.projects-main::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.projects-main::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+}
+
+.projects-main::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
 }
 
 .project {
-    padding: 30px;
-    transition: all 0.3s ease;
+  display: flex;
+  padding: 30px;
+  margin-right: 30px;
+  transition: all 0.3s ease;
 }
+
 .projects-main .project:hover {
-    transform: scale(1.02);
-    box-shadow: 1px 1px 20px var(--accent-color);
+  transform: scale(1.02);
+  box-shadow: 1px 1px 20px var(--accent-color);
+}
+
+.emot {
+  font-size: var(--ff-xs);
+  margin-right: 10px;
 }
 
 .project-title {
-    font-family: var(--ff-primary);
-    font-size: var(--ff-sm);
-    color: var(--dark-color);
-    line-height: 105%;
-    margin-bottom: 28px;
+  font-family: var(--ff-primary);
+  font-size: var(--ff-xs);
+  color: var(--dark-color);
+  margin-bottom: 20px;
 }
 .project-subtext {
-    font-family: var(--ff-primary);
-    font-weight: 400;
-    font-size: 1.3rem;
-    color: var(--dark-color);
-    line-height: 165%;
-    margin-left: 60px;
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: var(--dark-color);
 }
 
 /* Media Quaries */
 
 @media only screen and (max-width: 1440px) {
-    .project-title {
-        font-size: var(--ff-xs);
-    }
-    .project-subtext {
-        font-size: 1rem;
-        margin-left: 55px;
-    }
+  .projects-main {
+    transform: none;
+    top: 18%;
+    max-height: 74%;
+  }
 }
 
 @media only screen and (max-width: 1366px) {
-    .project-title {
-        font-size: var(--ff-xxs);
-        margin-bottom: 15px;
-    }
-    .project-subtext {
-        margin-left: 35px;
-    }
+  .project-title {
+    font-size: var(--ff-xxs);
+    margin-bottom: 20px;
+  }
+
+  .emot {
+    font-size: var(--ff-xxs);
+  }
+
+  .project-subtext {
+    font-size: var(--ff-xxs);
+  }
 }
 
-@media only screen and (max-width: 1024px) {
-    .projects-main {
-        max-width: 90%;
-    }
-    .project-title {
-        font-size: var(--ff-xxs);
-    }
+@media only screen and (max-width: 1023px) {
+  .projects-main {
+    top: 125px;
+  }
+
+  .projects-main::-webkit-scrollbar {
+    width: 0;
+  }
 }
 
 @media only screen and (max-width: 414px) {
-    .projects-main {
-        position: fixed;
-        top: 100px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 90%;
-        min-height: calc(100vh - 125px);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        overflow-y: scroll;
-    }
-    .projects-main a {
-        width: 100%;
-    }
+  .projects-main {
+    position: fixed;
+    top: 94px;
+    max-height: none;
+    height: calc(100vh - 94px);
+    max-width: 90%;
+    padding-bottom: 0;
+  }
 
-    .project {
-        padding: 10px;
-    }
-}
+  .project {
+    padding: 20px 10px;
+  }
 
-@media only screen and (max-width: 360px) {
-    .project-title {
-        font-size: 1rem;
-    }
-    .project-subtext {
-        font-size: 0.85rem;
-        margin-left: 30px;
-    }
+  .project-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  .project-subtext {
+    font-size: 0.85rem;
+  }
 }
